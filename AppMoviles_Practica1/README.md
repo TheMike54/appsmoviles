@@ -1,5 +1,7 @@
 # Practica 1 — Instalacion y Funcionamiento de los Entornos Moviles
 
+#Rodriguez Candelario Miguel Angel
+
 ## 1. Descripcion de las herramientas instaladas
 
 | Herramienta | Versión | Sistema Operativo |
