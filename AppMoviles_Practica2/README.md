@@ -312,6 +312,3 @@ PyJWT. (s. f.). *PyJWT Documentation*. https://pyjwt.readthedocs.io/
 Rougeth, M. (s. f.). *Flask-Bcrypt Documentation*. https://flask-bcrypt.readthedocs.io/
 
 Square Inc. (s. f.). *Retrofit*. https://square.github.io/retrofit/
-
-> Si consultaste algo más (un video, un foro, una respuesta de Stack Overflow) que yo no
-> haya visto en esta sesión, agrégalo aquí en formato APA.
