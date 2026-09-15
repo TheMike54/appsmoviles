@@ -34,7 +34,7 @@ REST propio para hacer login, registro y operaciones CRUD sobre un recurso (eleg
   compatibles con el JDK que tengo instalado — eso sí me costó tiempo resolver (más
   detalle en [Conclusiones](#conclusiones)).
 
-**Aviso de origen (requisito del profesor):** este proyecto parte del repositorio de
+**Aviso de origen :** este proyecto parte del repositorio de
 ejemplo `gabrielhuav/Flask-Compose-Login-API`. La sección [Qué se modificó sobre el
 ejemplo](#qué-modifiqué-o-agregué-sobre-el-repositorio-de-ejemplo) detalla exactamente
 qué archivos y funcionalidades agregué o cambié.
