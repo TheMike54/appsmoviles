@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — Práctica 2</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  }
+  h1 { font-size: 1.3rem; margin-top: 0; }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  #btnLogin { background: #2563eb; color: #fff; }
+  #btnRegister { background: #e5e7eb; color: #111; }
+  #resultado {
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: .9rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .ok { background: #dcfce7; color: #166534; }
+  .error { background: #fee2e2; color: #991b1b; }
+
+  /* Responsivo: en pantallas angostas (celular) la tarjeta ocupa casi todo el ancho */
+  @media (max-width: 480px) {
+    .card { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>Práctica 2 — Login</h1>
+
+    <input type="text" id="username" placeholder="Usuario" required>
+    <input type="password" id="password" placeholder="Contraseña" required>
+
+    <button id="btnLogin">Iniciar sesión</button>
+    <button id="btnRegister">Registrarme</button>
+
+    <div id="resultado"></div>
+  </div>
+
+<script>
+  // Cambia esta URL si el backend corre en otra dirección/puerto
+  const API_URL = 'http://localhost:5000';
+
+  const resultadoEl = document.getElementById('resultado');
+  const usernameEl = document.getElementById('username');
+  const passwordEl = document.getElementById('password');
+
+  function mostrarResultado(data, ok) {
+    resultadoEl.textContent = JSON.stringify(data, null, 2);
+    resultadoEl.className = ok ? 'ok' : 'error';
+  }
+
+  async function llamarApi(endpoint) {
+    if (!usernameEl.value.trim() || !passwordEl.value.trim()) {
+      mostrarResultado({ error: 'Usuario y contraseña son obligatorios' }, false);
+      return;
+    }
+    try {
+      const res = await fetch(API_URL + endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          username: usernameEl.value,
+          password: passwordEl.value
+        })
+      });
+      const data = await res.json();
+      mostrarResultado(data, res.ok);
+    } catch (err) {
+      mostrarResultado({ error: 'No se pudo conectar al backend: ' + err.message }, false);
+    }
+  }
+
+  document.getElementById('btnLogin').addEventListener('click', () => llamarApi('/login'));
+  document.getElementById('btnRegister').addEventListener('click', () => llamarApi('/register'));
+</script>
+</body>
+</html>
