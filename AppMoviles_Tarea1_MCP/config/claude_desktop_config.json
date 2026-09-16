@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-filesystem@2026.8.31",
+        "Z:\\Jueguitos\\Proyectitos\\Appsmoviles\\AppMoviles_Tarea1_MCP\\espacio-trabajo"
+      ]
+    }
+  }
+}

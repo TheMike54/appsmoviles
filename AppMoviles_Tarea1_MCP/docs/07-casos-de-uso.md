@@ -85,9 +85,6 @@ tele con el cable HDMI.
 ## ¿Cómo editan repositorios completos sin subir archivos?
 
 
-
-### El papel de Git
-
 Git es el centro de todo esto. De hecho si no mal recuerdo, cuando yo instalé Claude
 Code me lo pidió como requisito.
 
