@@ -1,0 +1,5 @@
+Este es el espacio de trabajo autorizado para la Tarea 1 de MCP (C717).
+
+Solo el contenido de esta carpeta es visible y modificable por el servidor MCP de
+sistema de archivos configurado en Claude Desktop. Cualquier intento de acceder a un
+archivo fuera de esta carpeta debe ser rechazado por el servidor.
