@@ -151,35 +151,67 @@ Invoke-RestMethod -Uri http://localhost:5000/tareas -Method POST `
 
 ### Instalación y ejecución
 
-**Backend:**
+**Requisitos:** Git, Docker (Docker Desktop en Windows/macOS) para el backend y Android
+Studio con el SDK de Android para la app.
 
-```powershell
-cd Z:\Jueguitos\Proyectitos\Appsmoviles\AppMoviles_Practica2\backend
+**1. Clonar el repositorio y entrar a la carpeta de la práctica**
+
+```bash
+git clone https://github.com/TheMike54/appsmoviles.git
+cd appsmoviles/AppMoviles_Practica2
+```
+
+**2. Backend**
+
+Desde `AppMoviles_Practica2`, entrar a la carpeta del backend:
+
+```bash
+cd backend
+```
+
+*(Opcional)* Configurar la variable de entorno `SECRET_KEY`, que se usa para firmar los
+JWT. Se copia el archivo de ejemplo y se cambia el valor por una clave propia:
+
+```bash
+# Windows (PowerShell)
+Copy-Item .env.example .env
+# Linux / macOS
+cp .env.example .env
+```
+
+Si este paso se omite, el backend arranca de todos modos con una clave de desarrollo y
+**avisa por consola** que no es segura — nunca deja de arrancar por falta de esa
+configuración. El archivo `.env` está en `.gitignore`, así que la clave real nunca se
+sube al repositorio.
+
+Levantar el servicio:
+
+```bash
 docker compose up --build
 ```
 
 - `docker compose up --build` construye la imagen (si hace falta) y levanta el
   contenedor; déjalo corriendo, ahí se ven los logs de cada petición.
-- El servicio queda en `http://localhost:5000`. La base SQLite (`site.db`) se crea sola
-  la primera vez.
-- La `SECRET_KEY` para firmar los JWT se toma del archivo `backend/.env` (no se sube al
-  repositorio). Se incluye `backend/.env.example` con el nombre de la variable como
-  referencia. Si `.env` no existe, el backend arranca de todos modos con una clave de
-  desarrollo y **avisa por consola** que no es segura — nunca deja de compilar/arrancar
-  por falta de esa configuración.
-- Para pararlo: `Ctrl+C` en esa ventana, o `docker compose down` desde otra.
+- El servicio queda en `http://localhost:5000` (el puerto 5000 de la computadora debe
+  estar libre). La base SQLite (`site.db`) se crea sola la primera vez.
+- Para pararlo: `Ctrl+C` en esa ventana, o `docker compose down` desde otra terminal
+  dentro de `backend`.
 
-**App Android:**
+**3. App Android**
 
-1. Abrir Android Studio → `Open` → carpeta
-   `Z:\Jueguitos\Proyectitos\Appsmoviles\AppMoviles_Practica2\app`.
+1. Abrir Android Studio → `Open` → seleccionar la carpeta `AppMoviles_Practica2/app`
+   del repositorio clonado.
 2. Esperar a que sincronice Gradle.
 3. Con el backend ya corriendo, correr la app (▶) sobre un emulador.
-4. También se puede compilar por línea de comandos para verificar que sí compila:
+4. También se puede compilar por línea de comandos para verificar que sí compila (desde
+   `AppMoviles_Practica2`):
 
-```powershell
-cd Z:\Jueguitos\Proyectitos\Appsmoviles\AppMoviles_Practica2\app
-.\gradlew assembleDebug
+```bash
+cd app
+# Windows (PowerShell)
+.\gradlew.bat assembleDebug
+# Linux / macOS
+sh gradlew assembleDebug
 ```
 
 #### Conexión de la app a la API
@@ -190,6 +222,44 @@ eso la app usa `10.0.2.2:5000` como `BASE_URL` (constante en `MainActivity.kt`, 
 máquina anfitriona. Si se prueba en un celular físico en la misma red WiFi, hay que
 cambiar esa constante por la IP local de la PC (`ipconfig` → "Dirección IPv4"), por
 ejemplo `192.168.1.X:5000`.
+
+### Qué hace cada instrucción del Dockerfile y del docker-compose.yml
+
+**`Dockerfile`**
+
+- `FROM python:3.9-slim`: parte de una imagen de Python 3.9 en versión ligera, para que
+  la imagen final pese menos.
+- `WORKDIR /app`: crea la carpeta `/app` dentro del contenedor y todo lo que sigue se
+  ejecuta ahí.
+- `COPY requirements.txt .`: copia primero solo la lista de dependencias. Así, si después
+  solo cambio el código, Docker reutiliza la instalación que ya tiene guardada en caché.
+- `RUN for i in 1 2 3 4 5; do pip install ...`: instala las dependencias. Si la descarga
+  se corta, vuelve a intentar el comando completo hasta 5 veces, esperando 5 segundos
+  entre cada intento.
+- `COPY . .`: copia el resto del código del backend (`app.py`, etc.).
+- `EXPOSE 5000`: indica que la aplicación escucha en el puerto 5000.
+- `CMD ["python", "app.py"]`: es el comando que se ejecuta al arrancar el contenedor;
+  levanta Flask y crea las tablas de la base de datos si no existen.
+
+**`docker-compose.yml`**
+
+- `services: web`: define un solo servicio llamado `web`, que es el backend.
+- `build: .`: construye la imagen con el Dockerfile de la misma carpeta.
+- `container_name: flask_login_backend`: le pone un nombre fijo al contenedor para
+  reconocerlo fácilmente.
+- `ports: "5000:5000"`: conecta el puerto 5000 del contenedor con el 5000 de la
+  computadora. Por eso la API se abre en `localhost:5000` y, desde el emulador, en
+  `10.0.2.2:5000`.
+- `volumes: .:/app`: monta la carpeta `backend` dentro del contenedor. Los cambios al
+  código se reflejan sin reconstruir la imagen, y la base `site.db` se guarda en la
+  computadora, así que no se pierde al borrar el contenedor.
+- `environment: SECRET_KEY=${SECRET_KEY}`: pasa al contenedor la clave para firmar los
+  JWT, que Docker Compose lee del archivo `.env`. Si ese archivo no existe, Compose
+  muestra un aviso de que la variable no está definida y el backend usa la clave de
+  desarrollo.
+- `networks ... mtu: 1400`: baja el tamaño máximo de los paquetes en la red interna de
+  Docker. En mi conexión a internet los paquetes grandes se cortaban y `pip install`
+  fallaba por tiempo de espera al construir la imagen.
 
 ### QA — seguridad verificada
 
@@ -205,8 +275,8 @@ ejemplo `192.168.1.X:5000`.
 - **Credenciales fuera del código:** la `SECRET_KEY` real vive en `backend/.env`, que
   está en `.gitignore` y nunca se sube; el repositorio solo publica
   `backend/.env.example` con el nombre de la variable, sin el valor real.
-- Estas verificaciones fueron manuales (con `Invoke-RestMethod`/`curl`) durante el
-  desarrollo; no hay una suite de pruebas automatizadas todavía.
+- Estas verificaciones las hice manualmente con `Invoke-RestMethod`/`curl` durante el
+  desarrollo.
 
 ![Logs del backend respondiendo cada operación](docs/backend_logs.png)
 
