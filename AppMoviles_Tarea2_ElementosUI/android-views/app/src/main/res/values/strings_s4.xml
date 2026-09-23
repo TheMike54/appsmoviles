@@ -1,0 +1,34 @@
+<resources>
+    <!-- Sección 4: Listas y colecciones -->
+    <string name="titulo_s4">Listas y colecciones</string>
+    <string name="inicio_desc_s4">Pestañas, lista vertical, detalle, deslizar para borrar, actualizar, estado vacío, cuadrícula y encabezados.</string>
+
+    <string name="s4_pestanas_titulo">Pestañas con contenido deslizable</string>
+    <string name="s4_pestanas_desc">Organizan contenido relacionado en páginas. Se cambia de página tocando la pestaña o deslizando el contenido hacia los lados.</string>
+    <string name="s4_tab_lista">Lista</string>
+    <string name="s4_tab_cuadricula">Cuadrícula</string>
+    <string name="s4_tab_secciones">Secciones</string>
+
+    <string name="s4_doc_encabezado">Elementos de esta pestaña (toca para ver u ocultar)</string>
+    <string name="s4_doc_lista"><b>Lista vertical:</b> muestra muchos elementos reutilizando las filas que salen de pantalla para no gastar memoria.\n<b>Detalle al seleccionar:</b> toca un elemento para ver su información completa.\n<b>Deslizar para eliminar:</b> desliza una fila hacia un lado para borrarla; puedes deshacerlo. (Aquí, para cambiar de pestaña, toca su título.)\n<b>Arrastrar para actualizar:</b> jala la lista hacia abajo para recargarla; agrega un elemento nuevo.\n<b>Estado vacío:</b> si la lista queda vacía se muestra una ilustración con un mensaje en lugar de una pantalla en blanco.\n<b>Conexión:</b> lo que agregas en Entrada de texto aparece aquí arriba.</string>
+    <string name="s4_doc_cuadricula"><b>Cuadrícula de elementos:</b> acomoda los elementos en columnas; es ideal para galerías o catálogos. Toca las tarjetas para seleccionarlas.</string>
+    <string name="s4_doc_secciones"><b>Lista con encabezados de sección:</b> agrupa los elementos por categoría. La lista mezcla dos tipos de fila distintos: encabezados y elementos. (En Views el encabezado no se queda fijo sin librerías extra.)</string>
+
+    <string name="s4_total">%1$d elemento(s) · desliza una fila para borrarla</string>
+    <string name="s4_total_vacio">Lista vacía</string>
+    <string name="s4_vaciar">Vaciar lista</string>
+    <string name="s4_restaurar">Restaurar lista</string>
+    <string name="s4_vacio_titulo">No hay elementos</string>
+    <string name="s4_vacio_mensaje">Vaciaste la lista o borraste todo. Restáurala o agrega algo desde Entrada de texto.</string>
+    <string name="s4_eliminado">«%1$s» eliminado</string>
+    <string name="s4_deshacer">Deshacer</string>
+    <string name="s4_actualizado">Lista actualizada: se agregó «%1$s».</string>
+    <string name="s4_detalle_mensaje">Categoría: %1$s\nIdentificador: %2$d\n\n%3$s</string>
+    <string name="s4_detalle_normal">Elemento de ejemplo generado por la app.</string>
+    <string name="s4_detalle_entrada">Este elemento lo escribiste en la sección Entrada de texto y llegó aquí gracias al estado compartido entre secciones.</string>
+    <string name="s4_cerrar">Cerrar</string>
+    <string name="s4_desde_entrada">Desde Entrada de texto · %1$s</string>
+    <string name="s4_cuadricula_estado">Seleccionadas: %1$d de %2$d</string>
+    <string name="s4_cuadricula_etiqueta">Tarjeta %1$d</string>
+    <string name="s4_secciones_estado">%1$d grupos · %2$d elementos</string>
+</resources>

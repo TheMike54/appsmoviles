@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sección 6: Contenedores y estructura. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/espaciador"
+        android:orientation="vertical"
+        android:padding="@dimen/margen_pantalla"
+        android:showDividers="middle">
+
+        <!-- S6-01 Fila, columna y superpuesta -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s6_distribucion_desc"
+            app:titulo="@string/s6_distribucion_titulo">
+
+            <TextView
+                style="@style/CatalogoUI.Subtitulo"
+                android:text="@string/s6_fila" />
+
+            <LinearLayout
+                android:id="@+id/contenedor_fila"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/fondo_zona"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp" />
+
+            <TextView
+                style="@style/CatalogoUI.Subtitulo"
+                android:text="@string/s6_columna" />
+
+            <LinearLayout
+                android:id="@+id/contenedor_columna"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fondo_zona"
+                android:minHeight="48dp"
+                android:orientation="vertical"
+                android:padding="4dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_agregar_caja"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s6_agregar_caja" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_quitar_caja"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/espacio_chico"
+                    android:text="@string/s6_quitar_caja" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/CatalogoUI.Subtitulo"
+                android:text="@string/s6_superpuesta" />
+
+            <FrameLayout
+                android:id="@+id/contenedor_superpuesto"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/fondo_zona">
+
+                <TextView
+                    android:id="@+id/capa_a"
+                    style="@style/CatalogoUI.Capa"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:text="A"
+                    android:textColor="?attr/colorOnPrimary" />
+
+                <TextView
+                    android:id="@+id/capa_b"
+                    style="@style/CatalogoUI.Capa"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="32dp"
+                    android:backgroundTint="?attr/colorTertiary"
+                    android:text="B"
+                    android:textColor="?attr/colorOnTertiary" />
+
+                <TextView
+                    android:id="@+id/capa_c"
+                    style="@style/CatalogoUI.Capa"
+                    android:layout_marginStart="96dp"
+                    android:layout_marginTop="52dp"
+                    android:backgroundTint="?attr/colorSecondary"
+                    android:text="C"
+                    android:textColor="?attr/colorOnSecondary" />
+            </FrameLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_rotar_capas"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:text="@string/s6_rotar_capas" />
+
+            <TextView
+                android:id="@+id/tv_distribucion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S6-02 Contenedor con desplazamiento vertical -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s6_scroll_desc"
+            app:titulo="@string/s6_scroll_titulo">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scroll_interno"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@drawable/fondo_zona"
+                android:fadeScrollbars="false"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:id="@+id/renglones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/espacio_chico" />
+            </androidx.core.widget.NestedScrollView>
+
+            <TextView
+                android:id="@+id/tv_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S6-03 Barra superior con título y acciones -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s6_toolbar_desc"
+            app:titulo="@string/s6_toolbar_titulo">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_demo"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorSurfaceContainer"
+                app:menu="@menu/menu_toolbar_demo"
+                app:navigationIcon="@drawable/ic_home"
+                app:navigationContentDescription="@string/s6_accion_inicio"
+                app:subtitle="@string/s6_toolbar_subtitulo"
+                app:title="@string/s6_toolbar_nombre" />
+
+            <TextView
+                android:id="@+id/tv_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:text="@string/s6_toolbar_instruccion"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S6-04 Barra de navegación inferior -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s6_bottomnav_desc"
+            app:titulo="@string/s6_bottomnav_titulo">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/fondo_zona">
+
+                <TextView
+                    android:id="@+id/tv_bottomnav_contenido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/espacio_chico"
+                    android:gravity="center"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    app:drawableTint="?attr/colorPrimary" />
+            </FrameLayout>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_nav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:menu="@menu/menu_bottom_demo" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S6-05 Pesos proporcionales y restricciones -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s6_pesos_desc"
+            app:titulo="@string/s6_pesos_titulo">
+
+            <TextView
+                android:id="@+id/tv_pesos"
+                style="@style/CatalogoUI.Subtitulo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/caja_peso_a"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/colorPrimaryContainer"
+                    android:gravity="center"
+                    android:textColor="?attr/colorOnPrimaryContainer" />
+
+                <TextView
+                    android:id="@+id/caja_peso_b"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:background="?attr/colorTertiaryContainer"
+                    android:gravity="center"
+                    android:textColor="?attr/colorOnTertiaryContainer" />
+            </LinearLayout>
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider_peso"
+                app:tickVisible="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/s6_peso_b"
+                android:stepSize="1"
+                android:value="1"
+                android:valueFrom="1"
+                android:valueTo="4" />
+
+            <TextView
+                android:id="@+id/tv_restricciones"
+                style="@style/CatalogoUI.Subtitulo" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/fondo_zona">
+
+                <TextView
+                    android:id="@+id/caja_restringida"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="?attr/colorPrimary"
+                    android:gravity="center"
+                    android:text="@string/s6_caja"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/espacio_chico"
+                    android:text="@string/s6_etiqueta_atada"
+                    android:textAppearance="?attr/textAppearanceBodySmall"
+                    app:layout_constraintBottom_toBottomOf="@id/caja_restringida"
+                    app:layout_constraintStart_toEndOf="@id/caja_restringida" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider_bias"
+                app:tickVisible="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/s6_bias"
+                android:stepSize="0.1"
+                android:value="0.5"
+                android:valueFrom="0"
+                android:valueTo="1" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

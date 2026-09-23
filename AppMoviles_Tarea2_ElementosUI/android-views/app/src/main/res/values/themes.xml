@@ -1,0 +1,46 @@
+<resources>
+    <!-- Material 3 DayNight: toma el modo claro u oscuro del sistema automáticamente. -->
+    <style name="Theme.CatalogoUI" parent="Theme.Material3.DayNight.NoActionBar" />
+
+    <!-- Título de cada tarjeta de elemento. -->
+    <style name="TextAppearance.CatalogoUI.TituloElemento" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Estilo base vacío: los estilos CatalogoUI.* heredan de él por su nombre. -->
+    <style name="CatalogoUI" />
+
+    <!-- Subtítulo dentro de una demostración. -->
+    <style name="CatalogoUI.Subtitulo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/espacio_chico</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:textAppearance">?attr/textAppearanceLabelLarge</item>
+    </style>
+
+    <!-- Caja de color usada en los ejemplos de distribución. -->
+    <style name="CatalogoUI.Capa">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:background">@drawable/fondo_caja</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <!-- Renglón de opción dentro de la hoja inferior. -->
+    <style name="CatalogoUI.OpcionHoja">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/margen_pantalla</item>
+        <item name="android:paddingEnd">@dimen/margen_pantalla</item>
+        <item name="android:drawablePadding">@dimen/margen_pantalla</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:textAppearance">?attr/textAppearanceBodyLarge</item>
+        <item name="drawableTint">?attr/colorOnSurfaceVariant</item>
+    </style>
+</resources>

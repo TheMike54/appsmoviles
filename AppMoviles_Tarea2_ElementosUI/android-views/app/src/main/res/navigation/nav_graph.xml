@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Destinos de la única Activity: Inicio + un Fragment por sección. -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="mx.escom.catalogoui.views.inicio.InicioFragment"
+        android:label="@string/titulo_inicio" />
+
+    <fragment
+        android:id="@+id/entradaTextoFragment"
+        android:name="mx.escom.catalogoui.views.secciones.EntradaTextoFragment"
+        android:label="@string/titulo_s1" />
+
+    <fragment
+        android:id="@+id/botonesFragment"
+        android:name="mx.escom.catalogoui.views.secciones.BotonesFragment"
+        android:label="@string/titulo_s2" />
+
+    <fragment
+        android:id="@+id/seleccionFragment"
+        android:name="mx.escom.catalogoui.views.secciones.SeleccionFragment"
+        android:label="@string/titulo_s3" />
+
+    <fragment
+        android:id="@+id/listasFragment"
+        android:name="mx.escom.catalogoui.views.secciones.listas.ListasFragment"
+        android:label="@string/titulo_s4" />
+
+    <fragment
+        android:id="@+id/informacionFragment"
+        android:name="mx.escom.catalogoui.views.secciones.InformacionFragment"
+        android:label="@string/titulo_s5" />
+
+    <fragment
+        android:id="@+id/contenedoresFragment"
+        android:name="mx.escom.catalogoui.views.secciones.ContenedoresFragment"
+        android:label="@string/titulo_s6" />
+</navigation>

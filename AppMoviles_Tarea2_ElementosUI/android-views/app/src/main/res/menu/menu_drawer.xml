@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Los ids coinciden con los destinos de nav_graph.xml para que NavigationUI los enlace solo. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/inicioFragment"
+            android:icon="@drawable/ic_home"
+            android:title="@string/titulo_inicio" />
+        <item
+            android:id="@+id/entradaTextoFragment"
+            android:icon="@drawable/ic_edit"
+            android:title="@string/titulo_s1" />
+        <item
+            android:id="@+id/botonesFragment"
+            android:icon="@drawable/ic_touch"
+            android:title="@string/titulo_s2" />
+        <item
+            android:id="@+id/seleccionFragment"
+            android:icon="@drawable/ic_check_box"
+            android:title="@string/titulo_s3" />
+        <item
+            android:id="@+id/listasFragment"
+            android:icon="@drawable/ic_list"
+            android:title="@string/titulo_s4" />
+        <item
+            android:id="@+id/informacionFragment"
+            android:icon="@drawable/ic_info"
+            android:title="@string/titulo_s5" />
+        <item
+            android:id="@+id/contenedoresFragment"
+            android:icon="@drawable/ic_dashboard"
+            android:title="@string/titulo_s6" />
+    </group>
+</menu>

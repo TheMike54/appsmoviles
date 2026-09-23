@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sección 3: Elementos de selección. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/espaciador"
+        android:orientation="vertical"
+        android:padding="@dimen/margen_pantalla"
+        android:showDividers="middle">
+
+        <!-- S3-01 Casillas con estado indeterminado -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s3_checkbox_desc"
+            app:titulo="@string/s3_checkbox_titulo">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_todos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/s3_todos" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cb_queso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s3_queso" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cb_champinones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s3_champinones" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cb_pimiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s3_pimiento" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S3-02 Botones de opción -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s3_radio_desc"
+            app:titulo="@string/s3_radio_titulo">
+
+            <RadioGroup
+                android:id="@+id/grupo_tamano"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rb_chica"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s3_chica" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rb_mediana"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s3_mediana" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rb_grande"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s3_grande" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/s3_radio_ninguno"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S3-03 Interruptor -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s3_switch_desc"
+            app:titulo="@string/s3_switch_titulo">
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switch_notificaciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/s3_notificaciones" />
+
+            <TextView
+                android:id="@+id/tv_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/s3_switch_off"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S3-04 Deslizadores -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s3_slider_desc"
+            app:titulo="@string/s3_slider_titulo">
+
+            <TextView
+                android:id="@+id/tv_volumen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceLabelLarge" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider_volumen"
+                app:tickVisible="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/s3_volumen"
+                android:stepSize="1"
+                android:value="40"
+                android:valueFrom="0"
+                android:valueTo="100" />
+
+            <TextView
+                android:id="@+id/tv_rango"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:textAppearance="?attr/textAppearanceLabelLarge" />
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/slider_rango"
+                app:tickVisible="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/s3_rango"
+                android:stepSize="50"
+                android:valueFrom="0"
+                android:valueTo="1000" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S3-05 Lista desplegable -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s3_spinner_desc"
+            app:titulo="@string/s3_spinner_titulo">
+
+            <Spinner
+                android:id="@+id/spinner_pais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/tv_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S3-06 Selectores de fecha y hora -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s3_fecha_desc"
+            app:titulo="@string/s3_fecha_titulo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fecha"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/s3_elegir_fecha" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_hora"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/espacio_chico"
+                    android:layout_weight="1"
+                    android:text="@string/s3_elegir_hora" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_fecha_hora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S3-07 Chips de filtro -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s3_chips_desc"
+            app:titulo="@string/s3_chips_titulo">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/grupo_chips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_fruta"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/categoria_fruta" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_verdura"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/categoria_verdura" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_grano"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/categoria_grano" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
+                android:id="@+id/tv_chips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

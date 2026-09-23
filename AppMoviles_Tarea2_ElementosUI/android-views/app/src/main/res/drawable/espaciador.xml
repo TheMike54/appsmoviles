@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Separación uniforme entre tarjetas (se usa como divider de LinearLayout). -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <size android:height="@dimen/espacio_tarjetas" />
+    <solid android:color="@android:color/transparent" />
+</shape>

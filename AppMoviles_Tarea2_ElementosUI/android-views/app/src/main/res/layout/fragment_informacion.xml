@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sección 5: Información y retroalimentación. -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/raiz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/espaciador"
+            android:orientation="vertical"
+            android:padding="@dimen/margen_pantalla"
+            android:showDividers="middle">
+
+            <!-- S5-01 Estilos de texto -->
+            <mx.escom.catalogoui.views.comun.ElementoCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:descripcion="@string/s5_textos_desc"
+                app:titulo="@string/s5_textos_titulo">
+
+                <TextView
+                    android:id="@+id/tv_titular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s5_texto_titular"
+                    android:textAppearance="?attr/textAppearanceHeadlineSmall" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s5_texto_subtitulo"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="?attr/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/tv_enfasis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/s5_texto_etiqueta"
+                    android:textAllCaps="true"
+                    android:textAppearance="?attr/textAppearanceLabelSmall"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+
+                <TextView
+                    android:id="@+id/tv_tamano"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espacio_chico"
+                    android:textAppearance="?attr/textAppearanceLabelLarge" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/slider_tamano"
+                    app:tickVisible="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/s5_tamano_texto"
+                    android:stepSize="2"
+                    android:value="22"
+                    android:valueFrom="12"
+                    android:valueTo="40" />
+            </mx.escom.catalogoui.views.comun.ElementoCard>
+
+            <!-- S5-02 Imágenes -->
+            <mx.escom.catalogoui.views.comun.ElementoCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:descripcion="@string/s5_imagen_desc"
+                app:titulo="@string/s5_imagen_titulo">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/grupo_escalado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:checkedChip="@id/chip_recortar"
+                    app:selectionRequired="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_recortar"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s5_recortar" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_ajustar"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s5_ajustar" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_original"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s5_original" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_local"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:background="?attr/colorSurfaceContainerHighest"
+                            android:contentDescription="@string/s5_imagen_local"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/paisaje_local" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/s5_imagen_local"
+                            android:textAppearance="?attr/textAppearanceBodySmall" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/espacio_chico"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_url"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:background="?attr/colorSurfaceContainerHighest"
+                            android:contentDescription="@string/s5_imagen_url"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_url_estado"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/s5_imagen_url"
+                            android:textAppearance="?attr/textAppearanceBodySmall" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_recargar_imagen"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s5_recargar" />
+            </mx.escom.catalogoui.views.comun.ElementoCard>
+
+            <!-- S5-03 Indicadores de progreso -->
+            <mx.escom.catalogoui.views.comun.ElementoCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:descripcion="@string/s5_progreso_desc"
+                app:titulo="@string/s5_progreso_titulo">
+
+                <TextView
+                    android:id="@+id/tv_progreso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceLabelLarge" />
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progreso_lineal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espacio_chico"
+                    android:max="100" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espacio_interno"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/progreso_circular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:max="100" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_avanzar"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/espacio_interno"
+                        android:text="@string/s5_avanzar" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_reiniciar"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s5_reiniciar" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espacio_interno"
+                    android:text="@string/s5_indeterminado"
+                    android:textAppearance="?attr/textAppearanceLabelLarge" />
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espacio_chico"
+                    android:indeterminate="true" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espacio_chico"
+                    android:indeterminate="true" />
+            </mx.escom.catalogoui.views.comun.ElementoCard>
+
+            <!-- S5-04 Toast y snackbar -->
+            <mx.escom.catalogoui.views.comun.ElementoCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:descripcion="@string/s5_mensajes_desc"
+                app:titulo="@string/s5_mensajes_titulo">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_toast"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/s5_mostrar_toast" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_snackbar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/espacio_chico"
+                        android:layout_weight="1"
+                        android:text="@string/s5_mostrar_snackbar" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_mensajes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espacio_chico"
+                    android:text="@string/toca_para_probar"
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
+            </mx.escom.catalogoui.views.comun.ElementoCard>
+
+            <!-- S5-05 Diálogo de confirmación -->
+            <mx.escom.catalogoui.views.comun.ElementoCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:descripcion="@string/s5_dialogo_desc"
+                app:titulo="@string/s5_dialogo_titulo">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_dialogo"
+                    style="@style/Widget.Material3.Button.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s5_eliminar_archivo"
+                    app:icon="@drawable/ic_delete" />
+
+                <TextView
+                    android:id="@+id/tv_dialogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espacio_chico"
+                    android:text="@string/toca_para_probar"
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
+            </mx.escom.catalogoui.views.comun.ElementoCard>
+
+            <!-- S5-06 Hoja inferior -->
+            <mx.escom.catalogoui.views.comun.ElementoCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:descripcion="@string/s5_hoja_desc"
+                app:titulo="@string/s5_hoja_titulo">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_hoja"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s5_abrir_hoja" />
+
+                <TextView
+                    android:id="@+id/tv_hoja"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espacio_chico"
+                    android:text="@string/toca_para_probar"
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
+            </mx.escom.catalogoui.views.comun.ElementoCard>
+
+            <!-- S5-07 Tarjeta, separador y badge -->
+            <mx.escom.catalogoui.views.comun.ElementoCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:descripcion="@string/s5_tarjeta_desc"
+                app:titulo="@string/s5_tarjeta_titulo">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="?attr/materialCardViewElevatedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/espacio_interno">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="6dp">
+
+                                <ImageView
+                                    android:id="@+id/iv_correo"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:contentDescription="@string/s5_bandeja"
+                                    android:src="@drawable/ic_mail"
+                                    app:tint="?attr/colorPrimary" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tv_bandeja"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/espacio_interno"
+                                android:layout_weight="1"
+                                android:textAppearance="?attr/textAppearanceTitleMedium" />
+                        </LinearLayout>
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="12dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_nuevo_correo"
+                                style="@style/Widget.Material3.Button.TonalButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/s5_nuevo_correo" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_leer"
+                                style="@style/Widget.Material3.Button.TextButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/espacio_chico"
+                                android:text="@string/s5_leer_todo" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </mx.escom.catalogoui.views.comun.ElementoCard>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

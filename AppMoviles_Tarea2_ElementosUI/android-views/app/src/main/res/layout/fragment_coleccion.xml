@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pestañas «Cuadrícula» y «Secciones»: documentación + una colección. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/doc"
+        layout="@layout/view_doc_plegable" />
+
+    <TextView
+        android:id="@+id/tv_estado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/margen_pantalla"
+        android:paddingBottom="4dp"
+        android:textAppearance="?attr/textAppearanceLabelLarge" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/espacio_chico"
+        android:paddingBottom="@dimen/espacio_interno" />
+</LinearLayout>

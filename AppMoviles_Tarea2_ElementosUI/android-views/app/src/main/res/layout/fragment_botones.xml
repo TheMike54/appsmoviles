@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sección 2: Botones y acciones. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/espaciador"
+        android:orientation="vertical"
+        android:padding="@dimen/margen_pantalla"
+        android:showDividers="middle">
+
+        <!-- S2-01 Relleno, contorno y texto -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s2_basicos_desc"
+            app:titulo="@string/s2_basicos_titulo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_relleno"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s2_relleno" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_contorno"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/espacio_chico"
+                    android:text="@string/s2_contorno" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_texto"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/espacio_chico"
+                    android:text="@string/s2_texto" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_basicos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S2-02 Botones con ícono -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s2_icono_desc"
+            app:titulo="@string/s2_icono_titulo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_favorito"
+                    style="?attr/materialIconButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:contentDescription="@string/s2_favorito"
+                    app:icon="@drawable/ic_favorite_border"
+                    app:iconTint="?attr/colorPrimary" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_compartir"
+                    style="@style/Widget.Material3.Button.TonalButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/espacio_interno"
+                    android:text="@string/s2_compartir"
+                    app:icon="@drawable/ic_share" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_icono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:text="@string/toca_para_probar"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S2-03 Botón de acción flotante -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s2_fab_desc"
+            app:titulo="@string/s2_fab_titulo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="6dp">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/s2_fab_normal"
+                    app:srcCompat="@drawable/ic_add" />
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/fab_extendido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/espacio_interno"
+                    android:text="@string/s2_fab_extendido"
+                    app:icon="@drawable/ic_edit" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_fab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:text="@string/toca_para_probar"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S2-04 Selector segmentado -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s2_toggle_desc"
+            app:titulo="@string/s2_toggle_titulo">
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/grupo_toggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:checkedButton="@id/toggle_dia"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/toggle_dia"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/s2_dia" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/toggle_semana"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/s2_semana" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/toggle_mes"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/s2_mes" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:id="@+id/tv_toggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:text="@string/toca_para_probar"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S2-05 Botón deshabilitado -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s2_deshabilitado_desc"
+            app:titulo="@string/s2_deshabilitado_titulo">
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switch_terminos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/s2_aceptar_terminos" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_continuar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:enabled="false"
+                android:text="@string/s2_continuar" />
+
+            <TextView
+                android:id="@+id/tv_deshabilitado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:text="@string/s2_deshabilitado_estado_off"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S2-06 Botón en estado de carga -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s2_carga_desc"
+            app:titulo="@string/s2_carga_titulo">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_carga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="160dp"
+                    android:text="@string/s2_descargar" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/progreso_carga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:visibility="gone"
+                    app:indicatorSize="24dp"
+                    app:trackThickness="3dp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_carga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:text="@string/toca_para_probar"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

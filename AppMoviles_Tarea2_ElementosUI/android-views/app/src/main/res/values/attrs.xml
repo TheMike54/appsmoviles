@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="ElementoCard">
+        <attr name="titulo" format="string" />
+        <attr name="descripcion" format="string" />
+    </declare-styleable>
+</resources>

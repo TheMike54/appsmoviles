@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/destino_inicio"
+        android:icon="@drawable/ic_home"
+        android:title="@string/s6_destino_inicio" />
+    <item
+        android:id="@+id/destino_buscar"
+        android:icon="@drawable/ic_search"
+        android:title="@string/s6_destino_buscar" />
+    <item
+        android:id="@+id/destino_perfil"
+        android:icon="@drawable/ic_person"
+        android:title="@string/s6_destino_perfil" />
+</menu>

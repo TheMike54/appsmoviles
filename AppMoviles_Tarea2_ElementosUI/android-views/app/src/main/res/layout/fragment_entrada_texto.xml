@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sección 1: Entrada de texto. Cada ElementoCard = nombre + explicación + demostración. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/espaciador"
+        android:orientation="vertical"
+        android:padding="@dimen/margen_pantalla"
+        android:showDividers="middle">
+
+        <!-- S1-01 Campo de texto simple (conectado con la Sección 4) -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s1_simple_desc"
+            app:titulo="@string/s1_simple_titulo">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_simple"
+                style="?attr/textInputOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/s1_simple_hint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_simple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapSentences" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_simple_eco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:text="@string/s1_simple_vacio"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_agregar_lista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:text="@string/s1_simple_agregar"
+                app:icon="@drawable/ic_add" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S1-02 Campo con validación -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s1_validacion_desc"
+            app:titulo="@string/s1_validacion_titulo">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_validacion"
+                style="?attr/textInputOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/s1_validacion_hint"
+                app:helperTextEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_validacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S1-03 Campo de contraseña -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s1_password_desc"
+            app:titulo="@string/s1_password_titulo">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_password"
+                style="?attr/textInputOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/s1_password_hint"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S1-04 Tipos de teclado -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s1_teclados_desc"
+            app:titulo="@string/s1_teclados_titulo">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="?attr/textInputOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/s1_teclado_numero">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_numero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="?attr/textInputOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:hint="@string/s1_teclado_correo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_correo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="?attr/textInputOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:hint="@string/s1_teclado_telefono">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_telefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_teclados_resumen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:textAppearance="?attr/textAppearanceBodySmall" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S1-05 Campo multilínea -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s1_multilinea_desc"
+            app:titulo="@string/s1_multilinea_titulo">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="?attr/textInputOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/s1_multilinea_hint"
+                app:counterEnabled="true"
+                app:counterMaxLength="200">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_multilinea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxLength="200"
+                    android:minLines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_multilinea_lineas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBodySmall" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S1-06 Sugerencias automáticas -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s1_sugerencias_desc"
+            app:titulo="@string/s1_sugerencias_titulo">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="?attr/textInputOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/s1_sugerencias_hint">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/ac_estados"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_sugerencia_elegida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+
+        <!-- S1-07 Barra de búsqueda -->
+        <mx.escom.catalogoui.views.comun.ElementoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:descripcion="@string/s1_busqueda_desc"
+            app:titulo="@string/s1_busqueda_titulo">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fondo_busqueda"
+                app:iconifiedByDefault="false"
+                app:queryHint="@string/s1_busqueda_hint" />
+
+            <TextView
+                android:id="@+id/tv_busqueda_resultados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </mx.escom.catalogoui.views.comun.ElementoCard>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

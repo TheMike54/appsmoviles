@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Segundo tipo de fila: encabezado de grupo. -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_encabezado"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSecondaryContainer"
+    android:paddingHorizontal="@dimen/margen_pantalla"
+    android:paddingVertical="@dimen/espacio_chico"
+    android:textAppearance="?attr/textAppearanceTitleSmall"
+    android:textColor="?attr/colorOnSecondaryContainer" />
