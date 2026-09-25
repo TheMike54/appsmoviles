@@ -1,0 +1,66 @@
+<resources>
+    <!-- Sección 3: Elementos de selección -->
+    <string name="titulo_s3">Elementos de selección</string>
+    <string name="inicio_desc_s3">Casillas, opciones, interruptor, deslizadores, desplegable, fecha, hora y chips.</string>
+
+    <string name="categoria_fruta">Fruta</string>
+    <string name="categoria_verdura">Verdura</string>
+    <string name="categoria_grano">Grano</string>
+
+    <string name="s3_checkbox_titulo">Casilla de verificación (con estado indeterminado)</string>
+    <string name="s3_checkbox_desc">Marca opciones independientes entre sí. La casilla «Todos» queda indeterminada (con una rayita) cuando solo algunas de sus opciones están marcadas.</string>
+    <string name="s3_todos">Todos los ingredientes</string>
+    <string name="s3_queso">Queso extra</string>
+    <string name="s3_champinones">Champiñones</string>
+    <string name="s3_pimiento">Pimiento</string>
+    <string name="s3_checkbox_estado">Marcados: %1$d de 3 · estado de «Todos»: %2$s</string>
+    <string name="s3_estado_marcado">marcado</string>
+    <string name="s3_estado_desmarcado">desmarcado</string>
+    <string name="s3_estado_indeterminado">indeterminado</string>
+
+    <string name="s3_radio_titulo">Grupo de botones de opción</string>
+    <string name="s3_radio_desc">Presenta opciones mutuamente excluyentes: al elegir una, la anterior se desmarca sola. Útil cuando todas las opciones deben verse a la vez.</string>
+    <string name="s3_chica">Chica</string>
+    <string name="s3_mediana">Mediana</string>
+    <string name="s3_grande">Grande</string>
+    <string name="s3_radio_ninguno">Aún no eliges tamaño.</string>
+    <string name="s3_radio_elegido">Tamaño elegido: %1$s</string>
+
+    <string name="s3_switch_titulo">Interruptor (switch)</string>
+    <string name="s3_switch_desc">Activa o desactiva una opción al instante, como un apagador. El cambio se aplica sin tener que pulsar «Guardar».</string>
+    <string name="s3_notificaciones">Notificaciones</string>
+    <string name="s3_switch_on">Notificaciones activadas 🔔</string>
+    <string name="s3_switch_off">Notificaciones desactivadas.</string>
+
+    <string name="s3_slider_titulo">Deslizador de valor único y de rango</string>
+    <string name="s3_slider_desc">Permite elegir un valor arrastrando, como el volumen. El de rango tiene dos extremos para elegir un mínimo y un máximo, como un rango de precios.</string>
+    <string name="s3_volumen">Volumen</string>
+    <string name="s3_rango">Rango de precio</string>
+    <string name="s3_volumen_valor">Volumen: %1$d</string>
+    <string name="s3_rango_valor">Precio: de $%1$d a $%2$d</string>
+
+    <string name="s3_spinner_titulo">Lista desplegable de selección</string>
+    <string name="s3_spinner_desc">Muestra solo la opción elegida y despliega la lista completa al tocarla. Ahorra espacio cuando hay muchas opciones.</string>
+    <string name="s3_spinner_elegido">País seleccionado: %1$s</string>
+
+    <string name="s3_fecha_titulo">Selector de fecha y selector de hora</string>
+    <string name="s3_fecha_desc">Abren diálogos estándar con calendario y reloj, así el usuario elige sin escribir y el formato siempre es válido.</string>
+    <string name="s3_elegir_fecha">Elegir fecha</string>
+    <string name="s3_elegir_hora">Elegir hora</string>
+    <string name="s3_fecha_hora">Fecha: %1$s · Hora: %2$s</string>
+    <string name="s3_sin_elegir">sin elegir</string>
+
+    <string name="s3_chips_titulo">Chips de filtro seleccionables</string>
+    <string name="s3_chips_desc">Etiquetas compactas que funcionan como filtros; se pueden activar varias a la vez. Al marcarlas, la lista de abajo se filtra.</string>
+    <string name="s3_chips_resultado">Mostrando (%1$d): %2$s</string>
+
+    <string-array name="paises">
+        <item>México</item>
+        <item>Argentina</item>
+        <item>Chile</item>
+        <item>Colombia</item>
+        <item>España</item>
+        <item>Perú</item>
+        <item>Uruguay</item>
+    </string-array>
+</resources>

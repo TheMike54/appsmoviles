@@ -1,0 +1,48 @@
+<resources>
+    <!-- Sección 6: Contenedores y estructura -->
+    <string name="titulo_s6">Contenedores y estructura</string>
+    <string name="inicio_desc_s6">Fila, columna, superpuesta, desplazamiento, barra superior, barra inferior, pesos y restricciones.</string>
+
+    <string name="s6_distribucion_titulo">Distribución en fila, en columna y superpuesta</string>
+    <string name="s6_distribucion_desc">Son las tres formas básicas de acomodar: uno al lado del otro (fila), uno debajo de otro (columna) o encimados (superpuesta), donde el último queda arriba.</string>
+    <string name="s6_fila">Fila (Row)</string>
+    <string name="s6_columna">Columna (Column)</string>
+    <string name="s6_superpuesta">Superpuesta (Box)</string>
+    <string name="s6_agregar_caja">Agregar caja</string>
+    <string name="s6_quitar_caja">Quitar caja</string>
+    <string name="s6_rotar_capas">Traer la de abajo al frente</string>
+    <string name="s6_distribucion_estado">Cajas en fila y columna: %1$d · capa al frente: %2$s</string>
+
+    <string name="s6_scroll_titulo">Contenedor con desplazamiento vertical</string>
+    <string name="s6_scroll_desc">Permite ver contenido más alto que el espacio disponible desplazándolo con el dedo. Este recuadro mide 160 dp pero contiene 30 renglones.</string>
+    <string name="s6_renglon">Renglón %1$d de 30</string>
+    <string name="s6_scroll_estado">Desplazado %1$d px · primer renglón visible: %2$d</string>
+
+    <string name="s6_toolbar_titulo">Barra superior con título y acciones</string>
+    <string name="s6_toolbar_desc">Muestra dónde está el usuario y las acciones más usadas de la pantalla. Las que no caben se van al menú de tres puntos. (La barra de arriba de la app es otra igual.)</string>
+    <string name="s6_toolbar_nombre">Mis notas</string>
+    <string name="s6_toolbar_subtitulo">Barra de ejemplo</string>
+    <string name="s6_toolbar_instruccion">Toca un ícono de la barra o el menú ⋮.</string>
+    <string name="s6_toolbar_accion">Acción pulsada en la barra: %1$s</string>
+    <string name="s6_accion_inicio">Inicio</string>
+    <string name="s6_accion_buscar">Buscar</string>
+    <string name="s6_accion_favorito">Favorito</string>
+    <string name="s6_accion_ajustes">Ajustes</string>
+    <string name="s6_accion_ayuda">Ayuda</string>
+
+    <string name="s6_bottomnav_titulo">Barra de navegación inferior</string>
+    <string name="s6_bottomnav_desc">Cambia entre 3 a 5 destinos principales con un solo toque, siempre al alcance del pulgar. La app usa el menú lateral porque tiene 7 destinos.</string>
+    <string name="s6_destino_inicio">Inicio</string>
+    <string name="s6_destino_buscar">Buscar</string>
+    <string name="s6_destino_perfil">Perfil</string>
+    <string name="s6_bottomnav_contenido">Contenido de «%1$s»</string>
+
+    <string name="s6_pesos_titulo">Distribución con pesos proporcionales y alineación relativa</string>
+    <string name="s6_pesos_desc">Con pesos el espacio se reparte en proporciones (1:1, 1:2…). Para ubicar una vista respecto a su contenedor se usa una alineación con sesgo; la etiqueta va en la misma fila que la caja y la sigue cuando se mueve.</string>
+    <string name="s6_peso_b">Peso de la caja B</string>
+    <string name="s6_pesos_estado">Pesos (Modifier.weight) · proporción A:B = 1:%1$d</string>
+    <string name="s6_bias">Posición horizontal de la caja</string>
+    <string name="s6_restricciones_estado">Alineación relativa (Box + BiasAlignment) · posición: %1$.1f</string>
+    <string name="s6_caja">Caja</string>
+    <string name="s6_etiqueta_atada">← junto a la caja</string>
+</resources>

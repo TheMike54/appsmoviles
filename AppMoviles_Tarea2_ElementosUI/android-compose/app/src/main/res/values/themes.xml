@@ -1,0 +1,5 @@
+<resources>
+    <!-- Tema de la ventana. Los colores de la interfaz los define Compose (ui/tema/Tema.kt).
+         Es un tema AppCompat porque la Activity usa AppCompat para fijar el idioma en español. -->
+    <style name="Theme.CatalogoUI" parent="Theme.AppCompat.DayNight.NoActionBar" />
+</resources>

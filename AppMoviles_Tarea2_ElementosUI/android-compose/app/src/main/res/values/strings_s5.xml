@@ -1,0 +1,67 @@
+<resources>
+    <!-- Sección 5: Información y retroalimentación -->
+    <string name="titulo_s5">Información y retroalimentación</string>
+    <string name="inicio_desc_s5">Estilos de texto, imágenes, progreso, toast, snackbar, diálogo, hoja inferior, tarjeta y badge.</string>
+
+    <string name="s5_textos_titulo">Textos con distintos estilos, tamaños y énfasis</string>
+    <string name="s5_textos_desc">El tamaño, el peso y el color crean jerarquía: indican qué se lee primero. Mueve el deslizador para cambiar el tamaño del titular.</string>
+    <string name="s5_texto_titular">Titular grande</string>
+    <string name="s5_texto_subtitulo">Subtítulo con el color principal</string>
+    <string name="s5_texto_etiqueta">Etiqueta pequeña en mayúsculas</string>
+    <string name="s5_tamano_texto">Tamaño del titular</string>
+    <string name="s5_tamano_valor">Tamaño del titular: %1$d sp</string>
+
+    <string name="s5_imagen_titulo">Imagen local e imagen desde URL</string>
+    <string name="s5_imagen_desc">La imagen local viene dentro de la app; la otra se descarga de internet. El modo de escalado define cómo se acomoda en su espacio: recortar, ajustar completa o tamaño original.</string>
+    <string name="s5_recortar">Recortar</string>
+    <string name="s5_ajustar">Ajustar</string>
+    <string name="s5_original">Original</string>
+    <string name="s5_imagen_local">Imagen local</string>
+    <string name="s5_imagen_url">Imagen desde URL</string>
+    <string name="s5_imagen_cargando">Descargando…</string>
+    <string name="s5_imagen_error">Sin conexión: no se pudo descargar.</string>
+    <string name="s5_recargar">Volver a descargar</string>
+
+    <string name="s5_progreso_titulo">Indicadores de progreso</string>
+    <string name="s5_progreso_desc">El modo determinado muestra cuánto falta cuando se conoce el avance. El indeterminado solo indica que algo está en proceso, sin saber cuánto tardará.</string>
+    <string name="s5_progreso_valor">Determinado: %1$d %%</string>
+    <string name="s5_avanzar" formatted="false">Avanzar 10 %</string>
+    <string name="s5_reiniciar">Reiniciar</string>
+    <string name="s5_indeterminado">Indeterminado (siempre en movimiento)</string>
+
+    <string name="s5_mensajes_titulo">Mensaje emergente (toast) y mensaje con acción (snackbar)</string>
+    <string name="s5_mensajes_desc">Ambos avisan algo breve sin interrumpir. El toast solo informa y se va solo; el snackbar aparece abajo y puede traer una acción, como «Deshacer».</string>
+    <string name="s5_mostrar_toast">Mostrar toast</string>
+    <string name="s5_mostrar_snackbar">Mostrar snackbar</string>
+    <string name="s5_toast">Cambios guardados</string>
+    <string name="s5_snackbar">Elemento archivado</string>
+    <string name="s5_snackbar_deshecho">Pulsaste «Deshacer»: el elemento volvió.</string>
+    <string name="s5_toast_mostrado">Se mostró un toast (abajo, desaparece solo).</string>
+
+    <string name="s5_dialogo_titulo">Diálogo de confirmación</string>
+    <string name="s5_dialogo_desc">Interrumpe para pedir confirmación antes de una acción importante o que no se puede deshacer. Ofrece dos salidas claras.</string>
+    <string name="s5_eliminar_archivo">Eliminar archivo</string>
+    <string name="s5_dialogo_pregunta">¿Eliminar «reporte.pdf»?</string>
+    <string name="s5_dialogo_mensaje">Esta acción no se puede deshacer.</string>
+    <string name="s5_cancelar">Cancelar</string>
+    <string name="s5_eliminar">Eliminar</string>
+    <string name="s5_dialogo_eliminado">Confirmaste: el archivo se eliminó (simulado).</string>
+    <string name="s5_dialogo_cancelado">Cancelaste: no se eliminó nada.</string>
+
+    <string name="s5_hoja_titulo">Hoja inferior (bottom sheet)</string>
+    <string name="s5_hoja_desc">Panel que sube desde abajo con opciones adicionales sin salir de la pantalla. Se cierra deslizándolo hacia abajo o tocando fuera.</string>
+    <string name="s5_abrir_hoja">Abrir hoja inferior</string>
+    <string name="s5_hoja_encabezado">¿Qué quieres hacer?</string>
+    <string name="s5_opcion_compartir">Compartir</string>
+    <string name="s5_opcion_copiar">Copiar enlace</string>
+    <string name="s5_opcion_editar">Editar</string>
+    <string name="s5_hoja_elegido">Elegiste en la hoja: %1$s</string>
+    <string name="s5_hoja_cerrada">La hoja se cerró sin elegir.</string>
+
+    <string name="s5_tarjeta_titulo">Tarjeta, separador y distintivo numérico (badge)</string>
+    <string name="s5_tarjeta_desc">La tarjeta agrupa contenido relacionado, el separador divide partes dentro de ella y el badge muestra cuántos pendientes hay sobre un ícono.</string>
+    <string name="s5_bandeja">Bandeja de entrada</string>
+    <string name="s5_bandeja_estado">Bandeja: %1$d sin leer</string>
+    <string name="s5_nuevo_correo">Llega un correo</string>
+    <string name="s5_leer_todo">Marcar como leído</string>
+</resources>

@@ -1,0 +1,115 @@
+<resources>
+    <string name="app_name">Catálogo de UI</string>
+    <string name="drawer_subtitulo">Versión Jetpack Compose</string>
+    <string name="volver">Volver</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="abrir_menu">Abrir menú</string>
+    <string name="cerrar_menu">Cerrar menú</string>
+    <string name="toca_para_probar">Tócalo para ver la respuesta aquí.</string>
+
+    <!-- Títulos de pantallas -->
+    <string name="titulo_inicio">Inicio</string>
+    <string name="titulo_s1">Entrada de texto</string>
+
+    <!-- Inicio -->
+    <string name="inicio_titulo">Catálogo interactivo de elementos de UI</string>
+    <string name="inicio_descripcion">Cada sección agrupa elementos de interfaz por categoría. En cada tarjeta verás el nombre del elemento, para qué sirve y una demostración que puedes tocar. Usa el menú lateral o las tarjetas de abajo para moverte.</string>
+    <string name="inicio_formato_seccion">Sección %1$d · %2$s</string>
+    <string name="inicio_desc_s1">Campos simples, validación, contraseña, teclados, multilínea, sugerencias y búsqueda.</string>
+
+    <!-- Sección 1: Entrada de texto -->
+    <string name="s1_simple_titulo">Campo de texto simple</string>
+    <string name="s1_simple_desc">Recibe texto libre. La etiqueta indica qué escribir y sube cuando el campo recibe el foco. Lo que escribas se puede enviar a la lista de la sección Listas.</string>
+    <string name="s1_simple_hint">Nombre de un elemento</string>
+    <string name="s1_simple_agregar">Agregar a la lista</string>
+    <string name="s1_simple_eco">Estás escribiendo: %1$s</string>
+    <string name="s1_simple_vacio">Escribe algo para verlo aquí.</string>
+    <string name="s1_simple_agregado">«%1$s» se agregó a la lista de la sección Listas.</string>
+    <string name="s1_simple_ver_lista">Ver lista</string>
+    <string name="s1_simple_falta">Escribe un nombre antes de agregarlo.</string>
+
+    <string name="s1_validacion_titulo">Campo con validación</string>
+    <string name="s1_validacion_desc">Revisa el dato mientras se escribe y muestra un mensaje de error visible cuando no cumple la regla. Así el usuario corrige antes de enviar.</string>
+    <string name="s1_validacion_hint">Usuario (mínimo 3 letras)</string>
+    <string name="s1_validacion_error">Debe tener al menos 3 letras y solo letras.</string>
+    <string name="s1_validacion_ok">Usuario válido ✔</string>
+
+    <string name="s1_password_titulo">Campo de contraseña</string>
+    <string name="s1_password_desc">Oculta lo escrito con puntos para proteger datos sensibles. El ícono del ojo permite mostrar u ocultar el contenido.</string>
+    <string name="s1_password_hint">Contraseña</string>
+    <string name="s1_password_fuerza">Longitud: %1$d caracteres · %2$s</string>
+    <string name="s1_password_debil">débil</string>
+    <string name="s1_password_media">media</string>
+    <string name="s1_password_fuerte">fuerte</string>
+
+    <string name="s1_teclados_titulo">Campos con distintos tipos de teclado</string>
+    <string name="s1_teclados_desc">Cada campo le pide al sistema el teclado adecuado: solo números, uno con arroba para correo o uno de marcación para teléfono. Toca cada campo para ver el cambio.</string>
+    <string name="s1_teclado_numero">Edad (teclado numérico)</string>
+    <string name="s1_teclado_correo">Correo (teclado de correo)</string>
+    <string name="s1_teclado_telefono">Teléfono (teclado telefónico)</string>
+    <string name="s1_teclados_resumen">Edad: %1$s · Correo: %2$s · Teléfono: %3$s</string>
+
+    <string name="s1_multilinea_titulo">Campo multilínea</string>
+    <string name="s1_multilinea_desc">Permite escribir varias líneas, útil para comentarios o descripciones. Crece con el texto y lleva un contador de caracteres.</string>
+    <string name="s1_multilinea_hint">Comentario</string>
+    <string name="s1_multilinea_lineas">Líneas escritas: %1$d</string>
+
+    <string name="s1_sugerencias_titulo">Campo con sugerencias automáticas</string>
+    <string name="s1_sugerencias_desc">Propone opciones mientras escribes para ahorrar tiempo y evitar errores de captura. Prueba escribiendo «Mé» o «Gu».</string>
+    <string name="s1_sugerencias_hint">Estado de la República</string>
+    <string name="s1_sugerencias_elegido">Elegiste: %1$s</string>
+
+    <string name="s1_busqueda_titulo">Barra de búsqueda</string>
+    <string name="s1_busqueda_desc">Campo especializado para buscar: trae ícono de lupa, botón para borrar y filtra los resultados al instante.</string>
+    <string name="s1_busqueda_hint">Buscar lenguaje…</string>
+    <string name="s1_busqueda_resultados">%1$d resultado(s): %2$s</string>
+    <string name="s1_busqueda_sin_resultados">Sin resultados para «%1$s».</string>
+
+    <string-array name="estados_mexico">
+        <item>Aguascalientes</item>
+        <item>Baja California</item>
+        <item>Baja California Sur</item>
+        <item>Campeche</item>
+        <item>Chiapas</item>
+        <item>Chihuahua</item>
+        <item>Ciudad de México</item>
+        <item>Coahuila</item>
+        <item>Colima</item>
+        <item>Durango</item>
+        <item>Estado de México</item>
+        <item>Guanajuato</item>
+        <item>Guerrero</item>
+        <item>Hidalgo</item>
+        <item>Jalisco</item>
+        <item>Michoacán</item>
+        <item>Morelos</item>
+        <item>Nayarit</item>
+        <item>Nuevo León</item>
+        <item>Oaxaca</item>
+        <item>Puebla</item>
+        <item>Querétaro</item>
+        <item>Quintana Roo</item>
+        <item>San Luis Potosí</item>
+        <item>Sinaloa</item>
+        <item>Sonora</item>
+        <item>Tabasco</item>
+        <item>Tamaulipas</item>
+        <item>Tlaxcala</item>
+        <item>Veracruz</item>
+        <item>Yucatán</item>
+        <item>Zacatecas</item>
+    </string-array>
+
+    <string-array name="lenguajes">
+        <item>Kotlin</item>
+        <item>Java</item>
+        <item>Dart</item>
+        <item>Swift</item>
+        <item>C#</item>
+        <item>JavaScript</item>
+        <item>TypeScript</item>
+        <item>Python</item>
+        <item>C++</item>
+        <item>Go</item>
+    </string-array>
+</resources>

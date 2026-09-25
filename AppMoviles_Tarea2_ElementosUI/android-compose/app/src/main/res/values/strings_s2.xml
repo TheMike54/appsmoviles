@@ -1,0 +1,49 @@
+<resources>
+    <!-- Sección 2: Botones y acciones -->
+    <string name="titulo_s2">Botones y acciones</string>
+    <string name="inicio_desc_s2">Relleno, contorno, texto, con ícono, flotantes, segmentados, deshabilitado y en carga.</string>
+
+    <string name="s2_basicos_titulo">Botón relleno, con contorno y de solo texto</string>
+    <string name="s2_basicos_desc">Son tres niveles de énfasis: el relleno es para la acción principal, el de contorno para una secundaria y el de texto para la menos importante.</string>
+    <string name="s2_relleno">Relleno</string>
+    <string name="s2_contorno">Contorno</string>
+    <string name="s2_texto">Texto</string>
+    <string name="s2_basicos_contador">Toques → relleno: %1$d · contorno: %2$d · texto: %3$d</string>
+
+    <string name="s2_icono_titulo">Botón con ícono</string>
+    <string name="s2_icono_desc">Un ícono comunica la acción de un vistazo. Solo con ícono ahorra espacio; con ícono y texto queda más claro qué hace.</string>
+    <string name="s2_favorito">Marcar como favorito</string>
+    <string name="s2_favorito_si">Marcado como favorito ♥</string>
+    <string name="s2_favorito_no">Ya no es favorito.</string>
+    <string name="s2_compartir">Compartir</string>
+    <string name="s2_compartido">Compartido %1$d vez/veces (simulado).</string>
+
+    <string name="s2_fab_titulo">Botón de acción flotante</string>
+    <string name="s2_fab_desc">Representa la acción más importante de la pantalla y normalmente flota sobre el contenido. La versión extendida agrega un texto y se puede encoger al hacer scroll.</string>
+    <string name="s2_fab_normal">Agregar</string>
+    <string name="s2_fab_extendido">Redactar</string>
+    <string name="s2_fab_contador">FAB normal pulsado %1$d vez/veces.</string>
+    <string name="s2_fab_encogido">El FAB extendido se encogió (solo ícono).</string>
+    <string name="s2_fab_expandido">El FAB extendido volvió a mostrar su texto.</string>
+
+    <string name="s2_toggle_titulo">Selector segmentado (botones de alternancia)</string>
+    <string name="s2_toggle_desc">Agrupa opciones cortas relacionadas y deja ver siempre cuál está activa. Aquí solo se puede elegir una a la vez.</string>
+    <string name="s2_dia">Día</string>
+    <string name="s2_semana">Semana</string>
+    <string name="s2_mes">Mes</string>
+    <string name="s2_toggle_elegido">Vista seleccionada: %1$s</string>
+
+    <string name="s2_deshabilitado_titulo">Botón deshabilitado</string>
+    <string name="s2_deshabilitado_desc">Indica una acción que todavía no está disponible. Se ve atenuado y no responde hasta que se cumple la condición, en este caso aceptar los términos.</string>
+    <string name="s2_aceptar_terminos">Acepto los términos y condiciones</string>
+    <string name="s2_continuar">Continuar</string>
+    <string name="s2_deshabilitado_estado_off">El botón está deshabilitado.</string>
+    <string name="s2_deshabilitado_estado_on">El botón ya está habilitado, puedes pulsarlo.</string>
+    <string name="s2_continuaste">¡Continuaste! El botón respondió porque estaba habilitado.</string>
+
+    <string name="s2_carga_titulo">Botón en estado de carga</string>
+    <string name="s2_carga_desc">Muestra que la acción está en proceso y se bloquea para evitar que se pulse dos veces. No existe como componente: se combina un botón con un indicador circular.</string>
+    <string name="s2_descargar">Descargar</string>
+    <string name="s2_cargando">Descargando… espera 2 segundos.</string>
+    <string name="s2_listo">¡Listo! Descarga simulada terminada.</string>
+</resources>

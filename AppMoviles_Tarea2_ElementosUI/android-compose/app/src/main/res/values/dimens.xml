@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="margen_pantalla">16dp</dimen>
+    <dimen name="espacio_tarjetas">12dp</dimen>
+    <dimen name="espacio_interno">16dp</dimen>
+    <dimen name="espacio_chico">8dp</dimen>
+</resources>
