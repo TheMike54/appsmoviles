@@ -6,7 +6,7 @@
 | **Grupo** | 7CV4 |
 | **Asignatura** | Desarrollo de Aplicaciones Móviles Nativas |
 | **Profesor** | Gabriel Hurtado Avilés |
-| **Equipo** | Miguel Ángel Rodríguez Candelario (TheMike54) · Víctor Moreno López ([VictorMoreno-Code](https://github.com/VictorMoreno-Code)) |
+| **Equipo** | Miguel Ángel Rodríguez Candelario (TheMike54) · Víctor Moreno López ([VictorMoreno-Code](https://github.com/VictorMoreno-Code)) · Ian Gael Reyna Mendoza ([IanRey692](https://github.com/IanRey692)) |
 | **Fecha de entrega** | 1 de octubre de 2026 |
 
 ## Enlaces de la entrega
@@ -116,7 +116,9 @@ solución en el workflow es `MAPS_API_KEY=${{ secrets.MAPS_API_KEY || 'DEFAULT_A
 
 - **Revisión de mi PR:** [QA de Víctor](https://github.com/gabrielhuav/PolitecnicoOpenWorld/pull/145#issuecomment-5920967885) sobre el SHA `15e90090` en un Samsung Galaxy S25 Ultra físico (Android 16): 4 casos aprobados (policía hombre sin sirena como regresión; policía mujer, Granadero y Granadera con sirena y `SIREN`), con un video por caso y la recomendación de integrar.
 - **Respuesta:** [mi respuesta](https://github.com/gabrielhuav/PolitecnicoOpenWorld/pull/145#issuecomment-5923375229): no se requirieron cambios; el SHA final se queda en `15e90090`.
-- **Revisión que hice yo:** QA del PR de Víctor, [gabrielhuav/PolitecnicoOpenWorld#154](https://github.com/gabrielhuav/PolitecnicoOpenWorld/pull/154) — [mi revisión](https://github.com/gabrielhuav/PolitecnicoOpenWorld/pull/154#pullrequestreview-5374139314) sobre el SHA `dda3b54d`: 5 peleas IA contra IA grabadas con audio y 5 hallazgos, entre ellos un bug (la reacción deja de sonar después de la primera pelea porque `lastSuperHitReactionMs` no se reinicia).
+- **Revisiones que hice yo:**
+  - QA del PR de Víctor, [gabrielhuav/PolitecnicoOpenWorld#154](https://github.com/gabrielhuav/PolitecnicoOpenWorld/pull/154) — [mi revisión](https://github.com/gabrielhuav/PolitecnicoOpenWorld/pull/154#pullrequestreview-5374139314) sobre el SHA `dda3b54d`: 5 peleas IA contra IA grabadas con audio y 5 hallazgos, entre ellos un bug (la reacción deja de sonar después de la primera pelea porque `lastSuperHitReactionMs` no se reinicia).
+  - QA del PR de Ian, [gabrielhuav/PolitecnicoOpenWorld#146](https://github.com/gabrielhuav/PolitecnicoOpenWorld/pull/146) — [mi revisión](https://github.com/gabrielhuav/PolitecnicoOpenWorld/pull/146#pullrequestreview-5387322094) sobre el SHA `378b0ab1`: 5 casos aprobados (selector de escenarios, pelea en las tres variantes del Planetario y bloqueo sin Modo Desarrollador) y 6 hallazgos; el principal, que el escenario no está en el catálogo y no se puede desbloquear fuera del Modo Desarrollador. Evidencias en [docs/evidencias/qa-pr146/](docs/evidencias/qa-pr146/).
 - **Estado final del PR:** abierto y sin conflictos con `main`; el profesor lo revisó en clase el 28 de septiembre y le
   asignó la etiqueta `qa-pending`. La aprobación y el merge no son requisito del examen.
 
@@ -132,8 +134,9 @@ solución en el workflow es `MAPS_API_KEY=${{ secrets.MAPS_API_KEY || 'DEFAULT_A
 | 28-sep-2026 | Revisión del profesor en clase (sugiere el subtítulo) |
 | 30-sep-2026 | Issue #1, commit `15e90090`, casos CP-01 y CP-02, recorte de los videos de CP-03 a CP-07, descripción del PR con las secciones del examen, solicitud de QA a Víctor |
 | 30-sep-2026 | QA del PR #154 de Víctor y respuesta a su revisión de mi PR |
+| 1-oct-2026 | QA del PR #146 de Ian |
 
-**Commits:** `3670a0ba`, `15e90090`. **Casos ejecutados:** CP-01 a CP-07. **Revisión hecha:** PR #154.
+**Commits:** `3670a0ba`, `15e90090`. **Casos ejecutados:** CP-01 a CP-07. **Revisiones hechas:** PR #154 y PR #146.
 
 ### Víctor Moreno López (VictorMoreno-Code)
 
@@ -142,6 +145,10 @@ solución en el workflow es `MAPS_API_KEY=${{ secrets.MAPS_API_KEY || 'DEFAULT_A
 | 30-sep-2026 | QA del PR #145 en un Samsung Galaxy S25 Ultra: 4 casos aprobados ([revisión](https://github.com/gabrielhuav/PolitecnicoOpenWorld/pull/145#issuecomment-5920967885)) |
 
 **Su propio PR:** [gabrielhuav/PolitecnicoOpenWorld#154](https://github.com/gabrielhuav/PolitecnicoOpenWorld/pull/154).
+
+### Ian Gael Reyna Mendoza (IanRey692)
+
+**Su propio PR:** [gabrielhuav/PolitecnicoOpenWorld#146](https://github.com/gabrielhuav/PolitecnicoOpenWorld/pull/146).
 
 ## 8. Declaración de uso de IA
 
